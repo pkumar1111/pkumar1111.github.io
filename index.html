@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>LinkedIn OAuth Callback</title>
+</head>
 <body>
-  <h1>Copy your code from URL</h1>
+  <h1>✅ Copy this Code</h1>
+  <p id="codeDisplay">Waiting for LinkedIn...</p>
+
   <script>
     const params = new URLSearchParams(window.location.search);
-    const code = params.get('code');
-    document.write(`<p><strong>Authorization Code:</strong> ${code}</p>`);
+    const code = params.get("code");
+    document.getElementById("codeDisplay").textContent = code 
+      ? `Authorization Code: ${code}`
+      : "❌ No code found in URL.";
   </script>
 </body>
 </html>
