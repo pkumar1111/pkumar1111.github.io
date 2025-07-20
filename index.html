@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Copy your code from URL</h1>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    document.write(`<p><strong>Authorization Code:</strong> ${code}</p>`);
+  </script>
+</body>
+</html>
